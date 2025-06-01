@@ -2,7 +2,7 @@ import {create} from 'zustand'
 import instance from '../lib/axios.js'
 import toast from 'react-hot-toast';
 import { io } from 'socket.io-client';
-const BASE_URL = Import.meta.env.MODE === 'development' ? "http://localhost:27011" : '/' ;
+const BASE_URL = import.meta.env.MODE === 'development' ? "http://localhost:27011" : '/' ;
 export const useAuthStore = create((set ,get) => ({
     authUser : null , 
     isSigningUp: false , 
